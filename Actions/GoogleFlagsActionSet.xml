@@ -1,0 +1,10 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+
+<ConditionalActions>
+
+<HasFlags requiredFlags="GoogleHackSuccess,GoogleDisconnected">
+	<RunFunction FunctionName="addFlags:CSEC_Member" FunctionValue="1" />
+ 	<LaunchHackScript Filepath="HackerScripts/Google.txt" DelayHost="ActionHost" Delay="5.5" SourceComp="GoogleWeb" TargetComp="playerComp" RequireLogsOnSource="false" RequireSourceIntact="false"/>
+ </HasFlags>
+
+</ConditionalActions>

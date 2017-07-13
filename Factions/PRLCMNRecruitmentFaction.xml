@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+
+<CustomFaction name="Parlocameon Recruitment Hub" id="PRLCMNRecruitmentHub" playerVal="0">
+
+	<Action ValueRequired="1">
+
+		<AddMissionToHubServer MissionFilepath="Missions/Recruitment/HackParlocameon.xml" TargetComp="PRLCMNRecruitmentHub"/>
+	    <AddIRCMessage Author="Parlocameon" TargetComp="PRLCMNRecruitmentHub" Delay="15.0">Hey @#PLAYERNAME# - time to show everyone just how skilled you are.</AddIRCMessage>
+    <AddIRCMessage Author="LukasWizard" TargetComp="PRLCMNRecruitmentHub" Delay="18.0">Good luck, @#PLAYERNAME#. I hope you join the team.</AddIRCMessage>
+
+   </Action>
+
+   <Action ValueRequired="100">
+   <AddIRCMessage Author="Parlocameon" TargetComp="PRLCMNRecruitmentHub" Delay="15.0">To be honest, I knew you could do it, @#PLAYERNAME#. But you have impressed me. Almost no one manages this test, even though I give them all the tools. Congrats. You wil be contacted shortly.</AddIRCMessage>
+   <AddIRCMessage Author="LukasWizard" TargetComp="PRLCMNRecruitmentHub" Delay="15.0">.....Holy shit....you actually did it..kinda didn't expect that, @#PLAYERNAME#. :| Anyways, congrats!</AddIRCMessage>
+   </Action>
+
+</CustomFaction>
+

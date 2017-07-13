@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+
+<Computer id="PRLCMNWhitelistServer" name="Parlocameon Whitelist Server" ip="42.135.12.32" security="5" allowsDefaultBootModule="true"
+	icon="chip" type="0" >
+<dlink target="PRLCMNGateway"/>
+<!-- Accounts -->
+<adminPass pass="ParlocameonJerkBlocker" />
+
+<account username="parker" password="thetruename" type="0" />
+
+<ports>21, 22, 25, 80, 1433, 104, 6881, 443, 192, 554</ports>
+	<firewall level="6" solution="wearelegion" additionalTime="1.0"/>
+	<trace time="5" />
+	<admin type="none"/>
+	<portsForCrack val="9999999" />
+
+	<WhitelistAuthenticatorDaemon SelfAuthenticating="false"/>
+
+</Computer>

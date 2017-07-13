@@ -1,0 +1,36 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<Computer id="PRLCMNAssetServer" name="Parlocameon Assets" ip="521.120.795.1204" security="5" allowsDefaultBootModule="true" icon="chip" type="1">
+
+    <adminPass pass="itsasmallworldafterall"/>
+    <account username="Parlocameon" password="ParlocameonIsAwesome" type="0"/>
+
+<ports>21, 22, 25, 80, 1433, 104, 6881, 443, 192, 554</ports>
+	<firewall level="6" solution="coolfiles" additionalTime="1.0"/>
+	<trace time="5678" />
+	<portsForCrack val="999" />
+	<admin type="none"/>
+
+   <file path="bin/exploits" name="FTPSprint.exe">#FTP_FAST_EXE#</file>
+   <file path="bin/exploits" name="SSHCrack.exe">#SSH_CRACK#</file>
+    <file path="bin/filedecryptors" name="Decypher.exe">#DECYPHER_PROGRAM#</file>
+   <file path="bin/filedecryptors" name="DECHead.exe">#DECHEAD_PROGRAM#</file>
+   <file path="bin/exploits" name="WebServerWorm.exe">#WEB_CRACK#</file>
+  <file path="bin/exploits" name="SMTPOverflow.exe">#SMTP_CRACK#</file>
+  <file path="bin/exploits" name="SQLBufferOverflow.exe">#SQL_CRACK#</file>
+  <file path="bin/exploits" name="KBTPortTest.exe">#MEDICAL_PROGRAM#</file>
+  <file path="bin/exploits" name="eosDeviceScan.exe">#EOS_SCANNER_EXE#</file>
+  <file path="bin/tracestoppers" name="Tracekill.exe">#TRACEKILL_EXE#</file>
+  <file path="bin/exploits" name="RTSPCrack.exe">#RTSP_EXE#</file>
+  <file path="bin/exploits" name="TorrentStreamInjector.exe">#TORRENT_EXE#</file>
+  <file path="bin/exploits" name="SSLTrojan.exe">#SSL_EXE#</file>
+  <file path="bin/exploits" name="PacificPortcrusher.exe">#PACIFIC_EXE#</file>
+  <file path="bin/tracestoppers" name="SignalScramble.exe">#SIGNAL_SCRAMBLER_EXE#</file>
+  <file path="bin/MemDumpAnalyzers" name="MemForensics.exe">#MEM_FORENSICS_EXE#</file>
+<file path="bin/MemDumpAnalyzers" name="MemDumpGenerator.exe">#MEM_DUMP_GENERATOR#</file>
+
+<!--Tribute to Matt-->
+<customthemefile path="sys/tribute" name="Matt_x-server.sys" themePath="Themes/MattTheme.xml"/>
+<customthemefile path="sys/tributetodiscord" name="MLG_Matt_x-server.sys" themePath="Themes/MLGMattTheme.xml"/>
+
+
+</Computer>

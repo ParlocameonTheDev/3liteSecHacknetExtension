@@ -1,0 +1,14 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+
+<CustomFaction name="3lite Security Group" id="3liteSec" playerVal="0">
+
+	<Action ValueRequired="1">
+
+		<!--<AddMissionToHubServer MissionFilepath="Missions/Recruitment/HackParlocameon.xml" TargetComp="PRLCMNRecruitmentHub"/>-->
+	    <AddIRCMessage Author="Parlocameon" TargetComp="3liteSECHub" Delay="15.0">Hey @CHANNEL - Welcome @#PLAYERNAME# to the group!</AddIRCMessage>
+    <AddIRCMessage Author="LukasWizard" TargetComp="3liteSECHub" Delay="18.0">Welcome @#PLAYERNAME#! Nice to see you in the group!</AddIRCMessage>
+    <AddIRCMessage Author="CoderX" TargetComp="3liteSECHub" Delay="20.0">Nice to meet ya, @#PLAYERNAME#, I expect big things from you.</AddIRCMessage>
+
+</Action>
+
+</CustomFaction>

@@ -1,0 +1,16 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<Computer id="GoogleWeb" name="Google" ip="www.google.com" security="5" allowsDefaultBootModule="true" icon="chip" type="1">
+
+	<adminPass pass="noonelikesyahoo"/>
+
+<ports>211, 21, 22, 25, 80, 1433, 104, 6881, 443, 192, 554, 9418, 3724, 3659</ports>
+	<firewall level="9001" solution="googleisunhackable" additionalTime="999999999999999"/>
+	<trace time="0.0001" />
+	<proxy time="100"/>
+	<portsForCrack val="99999999" />
+	<admin type="fast" resetPassword="true" isSuper="true"/>
+
+	<file path="home/noescape" name="cheater.txt">Tsk, tsk, when do you cheaters learn? I will deal with you soon.</file>
+
+	<addWebServer name="Google Server" url="Web/Google/index.html" />
+</Computer>

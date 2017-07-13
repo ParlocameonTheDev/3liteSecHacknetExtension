@@ -1,0 +1,19 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+
+<Computer id="3liteSECHub" name="3lite Security Hub" ip="#RANDOM_IP#" security="5" allowsDefaultBootModule="true" icon="chip" type="1">
+
+
+<DHSDaemon groupname="3lite Security Group" addsFactionPointOnMissionComplete="true" autoClearMissionsOnPlayerComplete="true" allowContractAbandon="false">
+	<agent name="Parlocameon" pass="society" color="209,74,48"/> 
+	<agent name="LukasWizard" pass="miencraftissucul" color="112,198,255"/>
+	<agent name="CoderX" pass="codingmakestheworldgoaround" color="11,124,1"/>
+	</DHSDaemon>
+
+<!-- Security -->
+  <ports>21, 22, 25, 80, 1433, 104, 6881, 443, 192, 554</ports>
+	<firewall level="6" solution="BetyouwIllnoTbeabletobeatthisCoolfirewallHoe" additionalTime="1000.0"/>
+	<trace time="10" />
+	<portsForCrack val="999" />
+	<proxy time="50"/>
+
+</Computer>

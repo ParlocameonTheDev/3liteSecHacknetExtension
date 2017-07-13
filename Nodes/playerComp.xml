@@ -1,0 +1,23 @@
+<?xml version= "1.0" encoding = "UTF-8" ?>
+
+<Computer id="playerComp" name="#PLAYERNAME#'s Battlestation" security="5" allowsDefaultBootModule="true">
+
+<LogoDaemon Name="#PLAYERNAME#'s Battlestation" ShowsTitle="true" TextColor="0, 220, 220, 200">
+<!--This currently does not work as of the current Hacknet Version: This computer is the sole property of: #PLAYERNAME#.-->
+<!--New note: As of the post Hacker Jam Patch, two bugs I reported are fixed, including the one above.-->
+Welcome to this Battlestation!
+This is the sole property of #PLAYERNAME#
+and SHOULD ONLY BE USED BY THEM.
+It currently runs: HackOS v10!
+It does not want to catch'em all, that's cruel!
+  </LogoDaemon>
+
+  <trace time="30" />
+  <proxy time="100"/>
+  <firewall level="100" solution="ParlocameonProtected" additionalTime="15.0"/>
+  <portsForCrack val="999999"/>
+  <admin type="fast" resetPassword="true" isSuper="true"/>
+
+<ports>21, 22, 25, 80, 1433, 104, 6881, 443, 192, 554</ports>
+
+</Computer>

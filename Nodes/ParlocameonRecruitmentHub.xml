@@ -1,0 +1,18 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+
+<Computer id="PRLCMNRecruitmentHub" name="Parlocameon Recruitment Hub" ip="441.174.5142.223" security="5" allowsDefaultBootModule="true" icon="chip" type="1">
+
+
+<DHSDaemon groupname="Parlocameon Recruitment" addsFactionPointOnMissionComplete="true" autoClearMissionsOnPlayerComplete="true" allowContractAbandon="false">
+	<agent name="Parlocameon" pass="legion" color="209,74,48"/> 
+	<agent name="LukasWizard" pass="battlec4ts4lif3" color="112,198,255"/>
+	</DHSDaemon>
+
+<!-- Security -->
+  <ports>21, 22, 25, 80, 1433, 104, 6881, 443, 192, 554</ports>
+	<firewall level="6" solution="wearelegion" additionalTime="1.0"/>
+	<trace time="5678" />
+	<admin type="none"/>
+	<portsForCrack val="999" />
+
+</Computer>

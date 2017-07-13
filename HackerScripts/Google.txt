@@ -1,0 +1,48 @@
+config [TARGET_COMP] [SOURCE_COMP] 0.2 $#%#$
+
+hideRam $#%#$
+connect $#%#$
+stopMusic $#%#$
+
+openPort 22 $#%#$
+openPort 21 $#%#$
+openPort 25 $#%#$
+openPort 80 $#%#$
+openPort 1433 $#%#$
+openPort 104 $#%#$
+openPort 6881 $#%#$
+openPort 443 $#%#$
+openPort 192 $#%#$
+openPort 554 $#%#$
+hideNetMap $#%#$
+hideDisplay $#%#$
+
+delay 3 $#%#$
+flash $#%#$
+
+delay 6 $#%#$
+
+clearTerminal $#%#$
+
+delay 2 $#%#$
+writel You shouldn't have messed with us. $#%#$
+delay 5 $#%#$
+writel You Will Never Beat Google. We are always watching. $#%#$
+delay 3 $#%#$
+writel Your cheating ends here. $#%#$
+delay 1 $#%#$
+writel Goodbye. $#%#$
+
+delete /sys x-server.sys $#%#$
+delete /sys os-config.sys $#%#$
+delete /sys bootcfg.dll $#%#$
+delete /sys netcfgx.dll $#%#$
+
+delay 7 $#%#$
+writel [SYSTEM]: All system files deleted. $#%#$
+delay 2 $#%#$
+
+writel [SYSTEM]: Instant Trace initiated. $#%#$
+startMusic $#%#$
+instanttrace $#%#$
+disconnect $#%#$

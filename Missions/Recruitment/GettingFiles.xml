@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding = "UTF-8" ?>
+
+<mission id="GettingFiles" activeCheck="false" shouldIgnoreSenderVerification="false">
+  <goals>
+    <goal type="getadmin" target="PRLCMNAssetServer"/>
+  </goals>
+
+    <missionEnd val="1">addRank</missionEnd>
+  <nextMission IsSilent="false">Missions/Recruitment/HubIntro.xml</nextMission>
+
+  <listing title="Getting Some Files" requiredRank="0">
+  	You'll need some exploits to hack me. I'll be happy to provide them.
+  </listing>
+
+    <email>
+    <!-- The sender field is very important for branching or silent mission chains. Even if this file you're editing isn't the
+    email on the server the player will be responding to, it will still run it's completion checks as long as the player is responding to
+    any email from the same sender. This doesn't affect basic and normal missions, so if you're not doing anything too fancy,
+    don't worry about it.-->
+    <sender>Parlocameon</sender>
+    <subject>Getting Files from the Asset Server</subject>
+    <body>
+       Download all the files from the asset server.
+       You'll need every single one.
+       Then reply here.
+    </body>
+    <!-- The attachments are the clickable items at the bottom of the email with a small "+"
+    You can have as many attachments as you want, of any kind, but I recommend keeping the number small
+    whenever possible, so the player can be focused on a single goal, and not be too overwhelmed.
+    Even if you have no attachments, make sure you include the opening and closing tag (with nothing inside)
+    They are required for the formatting.
+    -->
+    <attachments>
+
+     <link comp="PRLCMNAssetServer"/>
+     <account comp="PRLCMNAssetServer" user="admin" pass="itsasmallworldafterall"/>
+
+    </attachments>
+  </email>
+</mission>

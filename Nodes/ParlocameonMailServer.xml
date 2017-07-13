@@ -1,0 +1,25 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+
+<Computer id="jmail" name="Parlocameon Mail" ip="5452.142.147.251"	security="5" allowsDefaultBootModule="true" icon="chip" type="1" >
+
+	<account username="#PLAYERNAME#" password="hackingislife" type="mail"/>
+	<account username="Parlocameon" password="cantstopthefeeling" type="mail"/>
+	<account username="LukasWizard" password="iL0v3bL00NSTDBaTTLE" type="mail"/>
+	<account username="3liteSEC Mission Bot" password="OKxauUQla^11kxaToken1S(@*)" type="mail"/>
+	
+    <mailServer name="Parlocameon Corporation" color="22,255,247">
+
+    	<email recipient="LukasWizard" sender="Parlocameon" subject="Whitelist Server">
+Ugh, I can't believe you forgot the whitelist ip and password again. Oh well.
+IP: 42.135.12.32
+Pass: ParlocameonJerkBlocker
+
+    </email>
+
+</mailServer>
+
+	<ports>21, 22, 25, 80, 1433, 104, 6881, 443, 192, 554</ports>
+	<firewall level="6" solution="wearelegion" additionalTime="1.0"/>
+	<trace time="10" />
+	<portsForCrack val="999999999" />
+</Computer>

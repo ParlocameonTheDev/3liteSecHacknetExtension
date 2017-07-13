@@ -1,0 +1,9 @@
+<?xml version= "1.0" encoding = "UTF-8" ?>
+
+<ConditionalActions>
+
+<OnAdminGained target="GoogleWeb">
+   <RunFunction FunctionName="addFlags:GoogleHackSuccess" FunctionValue="1" />
+</OnAdminGained>
+
+</ConditionalActions>

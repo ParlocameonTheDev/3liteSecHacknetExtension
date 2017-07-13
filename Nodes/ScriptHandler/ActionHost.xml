@@ -1,0 +1,9 @@
+<Computer id="ActionHost" name="Fast Action Host #1" ip="FAST.ACTION.HOST" security="5" allowsDefaultBootModule="true" icon="chip" type="1">
+<FastActionHost/>
+<ports>211, 21, 22, 25, 80, 1433, 104, 6881, 443, 192, 554, 9418, 3724, 3659</ports>
+	<firewall level="9001" solution="nope" additionalTime="999999999999999"/>
+	<trace time="0.0001" />
+	<proxy time="100"/>
+	<portsForCrack val="99999999" />
+	<admin type="fast" resetPassword="true" isSuper="true"/>
+</Computer>

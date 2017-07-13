@@ -1,0 +1,14 @@
+
+<Computer id="PRLCMNRepo" name="Parlocameon Cipher Server" ip="CIP.H.E.RS" security="5" allowsDefaultBootModule="true" icon="chip" type="0" >
+	<ports>21, 22, 25, 80, 1433, 104</ports>
+	<firewall level="6" solution="encrypt" additionalTime="2.5"/>
+	<trace time="120" />
+	<portsForCrack val="6"/>
+<encryptedFile path="home" name="LukasWizardEMAILPass.dec" extension=".txt" ip="CIP.H.E.RS" header="LukasWizard's Email Pass" pass="sun">
+    iL0v3bL00NSTDBaTTLE
+  </encryptedFile>
+
+  <file path="home" name="riddle.txt">To find the answer, look at the sky, what causes the light of day and comes and goes by? The answer is one word all lower case.</file>
+
+
+</Computer>

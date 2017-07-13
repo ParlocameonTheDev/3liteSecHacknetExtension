@@ -1,0 +1,10 @@
+<ConditionalActions>
+
+    <Instantly>
+
+    	<RunFunction FunctionName="addRank" FunctionValue="1"/>
+        <LoadMission MissionName="Missions/3liteSec/start.xml"/>
+
+    </Instantly>
+
+</ConditionalActions>

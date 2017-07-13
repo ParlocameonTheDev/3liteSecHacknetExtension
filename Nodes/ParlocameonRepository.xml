@@ -1,0 +1,56 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+
+<Computer id="PRLCMNRepo" name="Parlocameon Repository" ip="231.123.37.21" security="5" allowsDefaultBootModule="true" icon="chip" type="0" >
+
+
+<DatabaseDaemon Permissions="private" DataType="GitCommitEntry" Foldername="database" Color="85,0,150" AdminEmailAccount="Parlocameon@ParlocameonMail.com" AdminEmailHostID="jmail" Name="Parlocameon's Private Repo">
+
+    <GitCommitEntry>
+      <EntryNumber>8613</EntryNumber>
+      <ChangedFiles>
+        <String>EnTechSecCrusher.exe</String>
+      </ChangedFiles>
+      <Message>Added basic code that will eventually allow me to crack that dreaded invulnerability</Message>
+      <UserName>Parlocameon</UserName>
+      <SourceIP>XXXX.XXX.XX.XXX (ENCRYPTED)</SourceIP>
+    </GitCommitEntry>
+    
+    <GitCommitEntry>
+      <EntryNumber>8611</EntryNumber>
+      <ChangedFiles>
+        <String>DDOSCrusher.exe</String>
+      </ChangedFiles>
+      <Message>Will add this to my servers making them impenetrable - after(and if) you manage to get in.</Message>
+      <UserName>Parlocameon</UserName>
+      <SourceIP>XX.XX.XXXX.XX (ENCRYPTED)</SourceIP>
+    </GitCommitEntry>
+  
+  </DatabaseDaemon>
+
+    <Memory>
+      <Data>
+        <Block>The pass for my eos device is: elitehacksareONLYFORelites</Block>
+      </Data>
+      <Commands>
+        <Command>rm eosDevicepass.txt</Command>
+      </Commands>
+    </Memory>
+
+
+    <eosDevice name="Parlocameon Repository Update ePad" id="PRLCMNRepoEPad" icon="ePhone2" passOverride="elitehacksareONLYFORelites">
+        <file path="eos/notes" name="Ram Storage.txt">All files on the linked computer are never to saved, and stored on RAM, -P.</file>
+        <file path="eos/notes" name="Password Server.txt">Cipher Server: CIP.H.E.RS</file>
+        <file path="bin" name="GithubRepoUpdater.exe">#BINARY#</file>
+    </eosDevice>
+
+<!-- Accounts -->
+
+<adminPass pass="ferraridragrace" />
+
+<account username="parker" password="thetruename" type="0" />
+<ports>21, 22, 25, 80, 1433, 104</ports>
+	<firewall level="6" solution="ParlocameonPrivateRepo12398712" additionalTime="2.5"/>
+	<trace time="60" />
+	<portsForCrack val="6"/>
+
+</Computer>

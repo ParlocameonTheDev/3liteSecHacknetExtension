@@ -1,0 +1,13 @@
+<ConditionalActions>
+  
+  <Instantly>
+    <RunFunction FunctionName="setFaction:PRLCMNRecruitmentHub" FunctionValue="0" />
+    <RunFunction FunctionName="setHubServer:PRLCMNRecruitmentHub" FunctionValue="0"/>
+    <RunFunction FunctionName="setAssetServer:PRLCMNAssetServer" FunctionValue="0"/>
+    
+    <AddConditionalActions Filepath="Actions/GoogleAdminGainedActionSet.xml" DelayHost="ActionHost" Delay="2.5"/>
+    <AddConditionalActions Filepath="Actions/GoogleDisconnectActionSet.xml" DelayHost="ActionHost" Delay="2.5"/>
+    <AddConditionalActions Filepath="Actions/GoogleFlagsActionSet.xml" DelayHost="ActionHost" Delay="2.5"/>
+  </Instantly>
+
+</ConditionalActions>

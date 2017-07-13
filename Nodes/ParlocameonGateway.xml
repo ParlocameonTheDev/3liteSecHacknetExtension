@@ -1,0 +1,24 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+
+<Computer id="PRLCMNGateway" name="Parlocameon Gateway" ip="456.124.542.23"	security="5" allowsDefaultBootModule="false" icon="chip" type="1" >
+
+<!-- Accounts -->
+
+<adminPass pass="parlocameonrocksandisincredibleParlocameonCorporationisandalwayswillbeunhackable34125" />
+
+<account username="parker" password="thetruename" type="0" />
+
+
+<!-- Security -->
+  <ports>21, 22, 25, 80, 1433, 104, 6881, 443, 192, 554</ports>
+	<firewall level="6" solution="wearelegion" additionalTime="1.0"/>
+	<trace time="5678" />
+	<admin type="none"/>
+	<portsForCrack val="10" />
+
+<!-- Other -->
+<file path="home/youwin" name="youvedoneit.txt">You won! You are now the hacking world champion, and my right hand man. Go to 1.1.1.1 for your oh so sweet reward.</file>
+
+<WhitelistAuthenticatorDaemon Remote="PRLCMNWhitelistServer"/>
+
+</Computer>

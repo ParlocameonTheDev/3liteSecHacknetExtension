@@ -1,0 +1,36 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+
+<mission id="3liteSecIntro" activeCheck="true" shouldIgnoreSenderVerification="false">
+   <goals>
+  </goals>
+  <missionEnd val="0">loadConditionalActions:Actions/3liteSEC/setup.xml</missionEnd>
+   <nextMission IsSilent="false">NONE</nextMission>
+
+ <posting title="The Real Mission Hub" requiredRank="100">
+   You ready?
+  </posting>
+
+  <email>
+    <!-- The sender field is very important for branching or silent mission chains. Even if this file you're editing isn't the
+    email on the server the player will be responding to, it will still run it's completion checks as long as the player is responding to
+    any email from the same sender. This doesn't affect basic and normal missions, so if you're not doing anything too fancy,
+    don't worry about it.-->
+    <sender>3liteSEC Mission Bot</sender>
+    <subject>The Real Mission Hub</subject>
+    <body>
+     It is time to join us in our group. You are being invited to the group 3liteSec, Where Parlocameon is the leader and LukasWizard is the second in command. Are you ready to join? If so, the attached links and password will give you what you need to join.
+    </body>
+    <!-- The attachments are the clickable items at the bottom of the email with a small "+"
+    You can have as many attachments as you want, of any kind, but I recommend keeping the number small
+    whenever possible, so the player can be focused on a single goal, and not be too overwhelmed.
+    Even if you have no attachments, make sure you include the opening and closing tag (with nothing inside)
+    They are required for the formatting.
+    -->
+    <attachments>
+        <link comp="3liteSECHub"/>
+        
+        <link comp="3liteSecAssetServer"/>
+        <account comp="3liteSecAssetServer" user="#PLAYERNAME#" pass="rewardsserversareawesome"/>
+    </attachments>
+  </email>
+</mission>

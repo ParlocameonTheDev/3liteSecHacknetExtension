@@ -1,0 +1,17 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<Computer id="3liteSecAssetServer" name="3liteSEC Assets" ip="#RANDOM_IP#" security="5" allowsDefaultBootModule="true" icon="chip" type="1">
+
+    <account username="#PLAYERNAME#" password="rewardsserversareawesome" type="0"/>
+
+<ports>21, 22, 25, 80, 1433, 104, 6881, 443, 192, 554</ports>
+	<firewall level="6" solution="coolfiles" additionalTime="1.0"/>
+	<trace time="5678" />
+	<portsForCrack val="999" />
+	<admin type="none"/>
+
+<!--Tribute to Matt-->
+<customthemefile path="sys/tribute" name="Matt_x-server.sys" themePath="Themes/MattTheme.xml"/>
+<customthemefile path="sys/tributetodiscord" name="MLG_Matt_x-server.sys" themePath="Themes/MLGMattTheme.xml"/>
+
+
+</Computer>

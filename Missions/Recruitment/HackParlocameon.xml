@@ -1,0 +1,215 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<!-- 
+Hacknet mission descriptor file
+
+Note: This format is pretty hacked together, and is a lot clunkier than the computer loader one.
+Not changing this was part of my "No re-writes" policy for Hacknet, so some of the elements are
+very strict about their ordering and case sensitivity. Be careful, and test!
+-->
+
+<!-- 
+id : the mission ID - this isn't used in-code but is sometimes useful in debugging and testing.
+
+activeCheck : if this is set to true, when this mission is active, Hacknet will test for this mission being complete
+              every frame, instead of only when the player responds to an email. This is very useful for creating delays,
+              and for situations where the player is contacted from outside an existing chain.
+              
+shouldIgnoreSenderVerification : This prevents the check to ensure that the player responded to the right sender
+                                 when checking for mission completion.
+-->
+<mission id="HackPRLCMN" activeCheck="false" shouldIgnoreSenderVerification="false">
+  <goals>
+    <goal type="getadmin" target="PRLCMNGateway"/>
+  </goals>
+  
+  <!-- The following items all need to in-order, so be careful. -->
+  
+  <!-- missionStart (Optional - just remove it to not use it) allows you to define a function that gets run when a mission is Loaded in. 
+  If suppress is set to true, it will only activate when the mission email is sent - 
+  otherwise it will activate when it is loaded. This is very important to remember when 
+  writing missions designed for use in a hub server - those missions are loaded when the save game is loaded
+  or a new game is started.
+  
+  val: This field lets you pass in integer data to the specified function
+  
+  The content field is the function name. Following are the available functions:
+  
+  setFaction:FACTION_ID
+  -Used like setFaction:entropy, sets the player's current faction to the faction with the given idName
+  
+  addRank
+  -This adds val in rank to the player's current active faction
+  
+  addRankFaction:[FACTION NAME]
+  -this adds the val to the specified faction. I.E: "addRankFaction:CSEC"
+  
+  addFlags:flagname1,flagname2,flagname3,etc
+  Adds the defined (1 or more) flags to the current session. Flags can unlock missions and do other tasks
+  
+  removeFlags:flagname1,flagname2,flagname3,etc
+  Removes the listed flags if they exist.
+  
+  changeSong
+  -changes to the song defined in val:
+  case 1:
+  default:
+      MusicManager.transitionToSong("Music\\Revolve");
+      break;
+  case 2:
+      MusicManager.transitionToSong("Music\\The_Quickening");
+      break;
+  case 3:
+      MusicManager.transitionToSong("Music\\TheAlgorithm");
+      break;
+  case 4:
+      MusicManager.transitionToSong("Music\\Ryan3");
+      break;
+  case 5:
+      MusicManager.transitionToSong("Music\\Bit(Ending)");
+      break;
+  case 6:
+      MusicManager.transitionToSong("Music\\Rico_Puestel-Roja_Drifts_By");
+      break;
+  case 7:
+      MusicManager.transitionToSong("Music\\out_run_the_wolves");
+      break;
+  case 8:
+      MusicManager.transitionToSong("Music\\Irritations");
+      break;
+  case 9:
+      MusicManager.transitionToSong("Music\\Broken_Boy");
+      break;
+  case 10:
+      MusicManager.transitionToSong("Music\\Ryan10");
+      break;
+  case 11:
+      MusicManager.transitionToSong("Music\\tetrameth");
+      break;
+      
+  loadConditionalActions:DLC/ActionScritps/HermeticAlchemistsActions.xml
+     
+    setHubServer:[SERVER ID]
+    - Sets the server with the given ID to be the new hub server visually on the netmap.
+    - this adds the little spinny things around it, like CSEC has in the base game.
+    
+    setAssetServer:[SERVER ID]
+    - Sets the server with the given ID to be the new asset server visually on the netmap.
+    - this adds the little star inside it
+    
+    
+    playCustomSong:[PATH_TO_SONG]
+    -Fades the music into the song file specified. Needs the whole path like: Music/Song.ogg
+    -Songs must be in Ogg Vorbis (.ogg) format
+    -Songs will not play on the XNA branch! 
+    
+    playCustomSongImmediatley:[PATH_TO_SONG]
+    -Plays the specified song above without the fade in - instantly snaps to it.
+      
+      #####################################
+      ### FOR LABYRINTHS DLC USERS ONLY ###
+      #####################################
+      
+    changeSongDLC
+    with values:
+    case 1:
+    default:
+        MusicManager.transitionToSong("DLC\\Music\\Remi2");
+        break;
+    case 2:
+        MusicManager.transitionToSong("DLC\\Music\\snidelyWhiplash");
+        break;
+    case 3:
+        MusicManager.transitionToSong("DLC\\Music\\Slow_Motion");
+        break;
+    case 4:
+        MusicManager.transitionToSong("DLC\\Music\\World_Chase");
+        break;
+    case 5:
+        MusicManager.transitionToSong("DLC\\Music\\HOME_Resonance");
+        break;
+    case 6:
+        MusicManager.transitionToSong("DLC\\Music\\Remi_Finale");
+        break;
+    case 7:
+        MusicManager.transitionToSong("DLC\\Music\\RemiDrone");
+        break;
+    case 8:
+        MusicManager.transitionToSong("DLC\\Music\\DreamHead");
+        break;
+    case 9:
+        //USERSPACE
+        MusicManager.transitionToSong("DLC\\Music\\Userspacelike");
+        break;
+    case 10:
+        MusicManager.transitionToSong("DLC\\Music\\CrashTrack");
+        break;
+      
+   
+    
+      
+   The rest of the functions you'll see in the game's core missions are custom ones written to be triggered a single time, with custom code.
+   If you have any requests for additions functions to be added for use in your mods, send an email request to matt@hacknet-os.com and i'll
+   see what I can do.
+  -->
+  <missionStart val="1" suppress="true">changeSong</missionStart>
+
+  <!-- Same as mission start (this is also optional), but this happens when the mission is completed.
+  Note that this will never trigger if the mission is abandoned or otherwise lost.-->
+  <missionEnd val="0">loadConditionalActions:Actions/startXmlLoader.xml</missionEnd>
+  
+  <!-- This defines the path to the next mission file. The mission file at this path will be loaded, and email sent when the current mission is completed.-->
+  <!-- The IsSilent flag is... admittedly in a terrible place here. It silenced THIS mission, not the next one. This means that if you set
+  IsSilent to be true here, this mission will not send and email when it is loaded.-->
+  
+  <!-- Important detail about mission completion: For a reply to work, the mission the player is currently on my have the same email sender field as the email
+  they reply to in their inbox. This means that if you have a silent connector mission, make sure it has the same sender filled in in the email field.-->
+  
+  <!-- If you want there to be no mission following this one (For example, the email mission that introduces you to a hub server)
+  set nextMission to "NONE"-->
+  <nextMission IsSilent="false">NONE</nextMission>
+
+  <!-- Next up are Branch missions (Optional)
+  Branch missions are loaded during the load step of this mission, and are held in parallel.
+  Every frame (if ActiveCheck) or every time an email is responded to, the mission system will
+  check the goals of the current mission (this file), and if it doesn't pass them, it will
+  check (in order) the goals of all the branch missions defined here. If successful, the branch mission's
+  "nextMission" will be loaded.
+  
+  This allows you to put in branching story paths, variable responses, and allow different responses for various goals.
+  It's a bit finicky to use, so I recommend testing all branch structures you put in very carefully.
+  
+  Note that the branch mission's email will not be sent - they are all loaded in silent mode.-->
+  <!-- The "Posting" of a mission is what gets read and put up on a mission listing board
+  like CSEC or Entropy in base Hacknet. "title" is the Mission title line that's displayed in the list.
+  reqs = a comma separated list of required flags before this mission can be accepted from a Hub server.
+         before the reqs and required rank are met, the mission will appear locked (like Junebug)
+         
+  requiredRank = the faction rank the player needs to have before this mission is unlocked (player rank must be >= this number)
+  -->
+  <posting title="Hack Me To Prove Yourself" requiredRank="1">
+    Time to prove yourself. Show me what you got.
+  </posting>
+  
+  <!-- This is the data of the email the player will be sent when this mission is accepted or continued to -->
+  <email>
+    <!-- The sender field is very important for branching or silent mission chains. Even if this file you're editing isn't the
+    email on the server the player will be responding to, it will still run it's completion checks as long as the player is responding to
+    any email from the same sender. This doesn't affect basic and normal missions, so if you're not doing anything too fancy,
+    don't worry about it.-->
+    <sender>Parlocameon</sender>
+    <subject>Hack Parlocameon Mission Email</subject>
+    <body>This server is linked(barely) to my gateway, hack it and reply to join the team. Ready, set, hack!
+    </body>
+    <!-- The attachments are the clickable items at the bottom of the email with a small "+"
+    You can have as many attachments as you want, of any kind, but I recommend keeping the number small
+    whenever possible, so the player can be focused on a single goal, and not be too overwhelmed.
+    Even if you have no attachments, make sure you include the opening and closing tag (with nothing inside)
+    They are required for the formatting.
+    -->
+    <attachments>
+
+     <link comp="PRLCMNRepo"/>
+
+    </attachments>
+  </email>
+</mission>

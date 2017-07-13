@@ -1,0 +1,10 @@
+<ConditionalActions>
+  
+  <Instantly>
+    <RunFunction FunctionName="setFaction:3liteSec" FunctionValue="0" />
+    <RunFunction FunctionName="setHubServer:3liteSECHub" FunctionValue="0"/>
+    <RunFunction FunctionName="setAssetServer:3liteSecAssetServer" FunctionValue="0"/>
+    <RunFunction FunctionName="addRank" FunctionValue="1"/>
+  </Instantly>
+
+</ConditionalActions>
